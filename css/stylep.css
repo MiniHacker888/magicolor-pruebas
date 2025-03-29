@@ -1,0 +1,478 @@
+/* Estilos Generales */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* Barra de Navegación */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent; /* Hace que la barra sea transparente */
+    backdrop-filter: blur(8px); /* Efecto de desenfoque */
+    -webkit-backdrop-filter: blur(8px);
+    -moz-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.nav {
+    display: inline-block;
+    width: 80%;
+  }
+  
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333; /* Color por defecto */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Estilo para cuando el fondo es oscuro (en este caso, cuando se hace scroll y el fondo es oscuro) */
+.navbar.dark-mode .nav-links a {
+    color: #fff; /* Cambiar el color del texto a blanco */
+}
+
+/*
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+}
+*/
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Estilos para la navegación activa */
+.nav-links a.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    font-weight: bold;
+}
+
+/*
+nav img {
+    width: 200%;
+  }
+*/
+
+/* Estilos para el modo oscuro en la barra de navegación */
+.dark-mode .nav-links a {
+    color: #eeeff0; /* Cambiar el color de los enlaces a blanco */
+}
+
+.dark-mode .navbar {
+    background: rgba(0, 0, 0, 0.8); /* Un fondo oscuro para la barra de navegación */
+}
+
+
+/* Hero Section */
+.hero {
+    margin-top: 60px;
+    height: 40vh;
+    background: url('../imgs/serv9.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+}
+
+#inicio, #nosotros, #servicios, #contacto {
+    scroll-margin-top: 80px; /* Ajusta según la altura del header */
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000;
+    transition: top 0.3s;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+ 
+/* li {
+  margin: 10px;
+  list-style-type: square;
+} */
+
+/* Sección de Bienvenida */
+.bienvenida {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Sección de Servicios Destacados */
+.servicios-destacados {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-item {
+    width: 220px;
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Sección Nosotros */
+#nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+
+.nosotros-container {
+    max-width: 800px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    line-height: 1.8;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+}
+
+
+.nosotros-container > div {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 700px; /* Aumentamos el ancho máximo para centrar mejor */
+    flex: 1;
+    min-width: 350px;
+    text-align: justify; /* Justifica el texto */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.contenido-nosotros {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.nosotros-container h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 20px;
+}
+
+.nosotros-container p, .nosotros-container ul {
+    font-size: 18px;
+    color: #444;
+    margin-top: 10px;
+}
+
+.nosotros-container ul {
+    padding-left: 20px;
+}
+
+.nosotros-container:hover {
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+}
+
+.nosotros-container h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+/*
+h2 {
+    position: absolute;
+    left: -9999px;
+}*/
+
+.nosotros-container li {
+    margin-bottom: 10px;
+}
+
+.nosotros-container ul li::before {
+    content: "•";
+    color: #007BFF;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Distribución en dos columnas */
+.nosotros-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.nosotros-column {
+    flex: 1;
+    min-width: 300px; /* Para asegurar que no se colapsen en pantallas pequeñas */
+}
+
+/* Mejorando títulos internos */
+.nosotros-column h3 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.nosotros-column ul {
+    padding-left: 20px;
+}
+
+.nosotros-column ul li {
+    margin-bottom: 10px;
+    list-style: disc;
+}
+
+.columna {
+    width: 45%;
+    text-align: left;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .nosotros-container {
+        flex-direction: column;
+    }
+    .columna {
+        width: 100%;
+    }
+}
+
+/* Ajuste para centrar títulos de secciones */
+#nosotros h2, #servicios h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 2.5em;
+    color: #007bff;
+    margin: 20px 0;
+}
+
+/* Ajuste para navegación sin corte al hacer clic */
+#nosotros, #servicios {
+    scroll-margin-top: 80px;
+}
+
+.servicios-container {
+    width: 100%;  /* Ocupar todo el ancho de la página */
+    padding: 20px;
+    background-color: #f8f9fa; /* Color de fondo suave */
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.servicios-container h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.servicios-container p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.servicios-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.servicios-container li {
+    font-size: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    color: #444;
+}
+
+/* Sentencias de compatibilidad para navegadores */
+@supports (-webkit-text-size-adjust: none) {
+    .servicios-container {
+        -webkit-text-size-adjust: none;
+    }
+}
+
+@-moz-document url-prefix() {
+    .servicios-container {
+        background-color: #eef0f2;
+    }
+}
+
+/* Compatibilidad con versiones antiguas de Internet Explorer */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .servicios-container {
+        background-color: #f0f0f0;
+    }
+}
+
+h1{
+    display: none;
+}
+
+
+/* Sección de Servicios con Precios */
+
+.grid {
+    /*display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    gap: 20px;*/
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 15px;
+  }
+  
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.grid-item {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+}
+
+.grid-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.grid-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.grid-item .precio {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.grid img {
+    width: 100%;
+  }
+  
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 50px;
+}
